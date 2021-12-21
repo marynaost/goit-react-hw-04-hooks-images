@@ -9,9 +9,7 @@ function fetchImage(searchQuery, page) {
     if (response.ok) {
       return response.json();
     }
-    return Promise.reject(
-      new Error(`Нема картинок із значенням ${searchQuery}`),
-    );
+    return Promise.reject(new Error('Something went wrong'));
   });
 }
 const API = { fetchImage };
